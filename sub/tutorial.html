@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Google One AI Premium Grátis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e configurações base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #4285F4; /* Azul Google */
+            --secondary-color: #EA4335; /* Vermelho Google */
+            --accent-color: #34A853; /* Verde Google */
+            --background-dark: #1a1a2e;
+            --background-light: #f0f2f5;
+            --card-background: #ffffff;
+            --text-dark: #333333;
+            --text-light: #f0f0f0;
+            --code-background: #e8e8e8;
+            --code-text: #c7254e;
+            --border-color: #dddddd;
+            --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --shadow-dark: 0 8px 16px rgba(0, 0, 0, 0.2);
+            --border-radius: 8px;
+            --transition-speed: 0.3s ease;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .tutorial-container {
+            max-width: 800px;
+            background-color: var(--card-background);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: var(--secondary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            color: var(--accent-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        ol {
+            margin-bottom: 15px;
+            padding-left: 25px;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .important-note {
+            background-color: #fff3cd; /* Amarelo claro */
+            border-left: 5px solid #ffc107; /* Amarelo escuro */
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: var(--border-radius);
+            color: #664d03;
+        }
+
+        .warning-note {
+            background-color: #f8d7da; /* Vermelho claro */
+            border-left: 5px solid #dc3545; /* Vermelho escuro */
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: var(--border-radius);
+            color: #721c24;
+        }
+
+        .code-block {
+            background-color: var(--code-background);
+            color: var(--code-text);
+            font-family: 'Roboto Mono', monospace;
+            padding: 15px;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        .credits {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        .credits span {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Dark Mode */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--background-dark);
+                color: var(--text-light);
+            }
+            .tutorial-container {
+                background-color: #2c2c40;
+                box-shadow: var(--shadow-dark);
+            }
+            h1 {
+                color: var(--primary-color);
+                border-bottom-color: #444466;
+            }
+            h2 {
+                color: var(--secondary-color);
+            }
+            h3 {
+                color: var(--accent-color);
+            }
+            a {
+                color: #8ab4f8; /* Azul mais claro para links no modo escuro */
+            }
+            a:hover {
+                color: #a7c9f8;
+            }
+            .important-note {
+                background-color: #4e4e2a;
+                border-left-color: #d4a72c;
+                color: #ffeb3b;
+            }
+            .warning-note {
+                background-color: #5c3030;
+                border-left-color: #ff6b6b;
+                color: #ff9999;
+            }
+            .code-block {
+                background-color: #33334a;
+                color: #e0e0e0;
+            }
+            .credits {
+                border-top-color: #444466;
+                color: #b8b8d1;
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .tutorial-container {
+                padding: 20px;
+                margin: 10px 0;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tutorial-container">
+        <h1>Tutorial: Google One AI Premium Grátis</h1>
+        <p>Neste tutorial, você aprenderá a ativar gratuitamente o plano Google One AI Premium (com 2TB de Drive e acesso ao Gemini AI), utilizando um e-mail educacional .edu.</p>
+
+        <h2>✅ Pré-requisitos</h2>
+        <ul>
+            <li>Uma conta Google que nunca assinou o Google One antes.</li>
+            <li>Um cartão de crédito ou débito (dica alternativa ao final, caso não tenha um).</li>
+        </ul>
+
+        <h2>🧠 Etapas do processo</h2>
+        <ol>
+            <li>
+                <h3>Acesse o site oficial do Google One AI</h3>
+                <p>Vá para: <a href="https://one.google.com/about/google-ai-plans/" target="_blank">https://one.google.com/about/google-ai-plans/</a></p>
+                <p>Clique em 
+
+
+"Começar avaliação gratuita" ou algo semelhante.</p>
+            </li>
+
+            <li>
+                <h3>Criar um e-mail estudantil .edu</h3>
+                <p>Use o site abaixo para gerar um e-mail acadêmico gratuito: <a href="https://edumail.icu" target="_blank">https://edumail.icu</a></p>
+                <p>Siga as instruções com atenção até obter seu e-mail .edu funcional.</p>
+            </li>
+
+            <li>
+                <h3>Ativar a oferta estudantil</h3>
+                <ul>
+                    <li>Volte ao site do Google One com sua conta Google aberta</li>
+                    <li>Insira o e-mail estudantil .edu criado</li>
+                    <li>Adicione uma forma de pagamento válida</li>
+                    <li>Confirme os dados e conclua o processo</li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="important-note">
+            <p>🕒 <strong>Duração da oferta:</strong> até 15 meses gratuitos</p>
+            <p>⚠️ <strong>Importante:</strong> defina lembrete para cancelar antes da renovação automática e evitar cobranças.</p>
+        </div>
+
+        <h2>🧩 Dica bônus: sem cartão? Use BINs (com cautela)</h2>
+        <p>Se não possuir cartão, você pode tentar usar os seguintes dados (exclusivamente para ativação, pois não será feita cobrança):</p>
+        <div class="code-block">
+            <p>5598880361927736|01|2028|869</p>
+            <p>5598880361923511|01|2028|889</p>
+            <p>5598880361920178|01|2028|394</p>
+            <p>5598880361923107|01|2028|918</p>
+            <p>5598880361928882|01|2028|404</p>
+            <p>5598880361928775|01|2028|919</p>
+            <p>5598880361922471|01|2028|247</p>
+            <p>5598880361922547|01|2028|747</p>
+            <p>5598880361927116|01|2028|939</p>
+            <p>5598880361925342|01|2028|999</p>
+            <p>5598880361924063|01|2028|946</p>
+            <p>5598880361922117|01|2028|058</p>
+            <p>5598880361920343|01|2028|449</p>
+        </div>
+        <div class="warning-note">
+            <p>⚠️ <strong>Atenção:</strong></p>
+            <ul>
+                <li>Use com moderação, evite abusos</li>
+                <li>Alguns BINs podem já estar bloqueados pelo sistema Google</li>
+                <li>Este método é de uso pessoal e experimental</li>
+            </ul>
+        </div>
+
+        <h2>🎁 Benefícios ao final do processo</h2>
+        <ul>
+            <li>2 TB de armazenamento no Google Drive</li>
+            <li>Acesso total ao Gemini AI Premium</li>
+            <li>Ferramentas de IA integradas aos apps do Google</li>
+        </ul>
+
+        <div class="warning-note">
+            <p>⚠️ <strong>Aviso Legal:</strong></p>
+            <p>Esse tutorial é apenas para fins educacionais e informativos.</p>
+            <p>Não me responsabilizo por usos indevidos, fraudes ou violações de termos de serviço da Google.</p>
+        </div>
+
+        <div class="credits">
+            <p>Feito por: JPNJ<i class="fas fa-coffee"></i></p>
+        </div>
+    </div>
+</body>
+</html>
+
